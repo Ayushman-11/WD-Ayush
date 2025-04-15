@@ -1,0 +1,118 @@
+body{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.first-div{
+    background: aliceblue;
+    border: 2px solid rgb(42, 154, 245);
+}
+.second-div{
+    background: rgba(247, 223, 223, 0.616);
+    border: 2px solid rgb(245, 42, 42);
+}
+.third-div{
+    background: rgba(248, 247, 172, 0.616);
+    border: 2px solid rgb(245, 232, 42);
+}
+.fourth-div{
+    background: rgb(236, 255, 185);
+    border: 2px solid rgb(133, 245, 42);
+}
+.fifth-div{
+
+    background: whitesmoke;
+    border: 2px solid black;
+}
+.sixth-div{
+    background: rgb(211, 248, 0);
+    border: 2px solid rgb(0, 255, 4);
+}
+.first-div,.second-div,.third-div, .fourth-div, .fifth-div, .sixth-div, .seventh-div{
+    margin-top: 4px;
+    width: 350px;
+    display: block;
+    align-content: center;
+    align-items: center; 
+    padding: 8px;
+    border-radius: 8px;
+}
+.example-of-lists{
+    margin: 0;
+    display: block;
+    align-items: center;
+}
+table,td,th{
+    border: 2px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+}
+td,th{
+    padding: 4px;
+}
+img{
+    width:40%;
+    /* padding: 8px; */ 
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 8px;
+}
+.sixth-div h2{
+    color: white;
+}
+
+/*Employee Form*/
+.seventh-div{
+    border: 2px solid blueviolet;
+    margin: 4px 0 0 8px;
+    width: auto;
+    display: block;
+    align-content: center;
+    align-items: center; 
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.form-group{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+label {
+    width: 100px;
+    font-size: 16px;
+    color: #333;
+}
+
+input[type="text"],
+input[type="email"],input[type="number"] {
+    flex-grow: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.output {
+    margin: 4px 0 0 8px;
+    padding: 15px;
+    border: 1px solid #007bff;
+    border-radius: 8px;
+    background: #f8f9fa;
+    display: block; /* Initially hidden */
+}

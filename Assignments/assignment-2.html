@@ -1,0 +1,177 @@
+
+<?php
+// Initialize variables to prevent "undefined index" warnings
+$name = $emp_id = $email = $department = "";
+
+// Check if form is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve and sanitize form inputs
+    $name = htmlspecialchars($_POST['name']);
+    $emp_id = htmlspecialchars($_POST['emp-id']);
+    $email = htmlspecialchars($_POST['email']);
+    $department = htmlspecialchars($_POST['department']);
+}
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="Assignments/assets/style.css"> -->
+    <title>Basic Tags of HTML</title>
+</head>
+
+<body>
+    <section class="first-section">
+        <div class="first-div">
+            <h2 class="heading">BASIC TAGS OF HTML</h2>
+            <p id="Description">
+                This is the <i>description</i> of heading.<br>You can <mark>refer</mark> <b>official website</b> for
+                more
+                <strong>information</strong>.
+            </p>
+        </div>
+        <div class="second-div">
+            <h2>TYPES OF LIST</h2>
+            <ol>
+                <li>Ordered List.</li>
+                <li>Un-ordered List.</li>
+                <li>Description List.</li>
+            </ol>
+            <div class="example-of-lists">
+                <div class="ol">
+                    <h4>Ordered List -</h4>
+                    <ol>
+                        <li>First Item</li>
+                        <li>Second Item</li>
+                        <li>So on...</li>
+                    </ol>
+                </div>
+                <div class="ul">
+                    <h4>Un-Ordered List -</h4>
+                    <ul>
+                        <li>First Item</li>
+                        <li><strike>Second Item</strike></li>
+                        <li>So on...</li>
+                    </ul>
+                </div>
+                <div class="ul">
+                    <h4>Description List -</h4>
+                    <dl>
+                        <dt>
+                            First Item
+                        <dd>Description of first item.</dd>
+                        </dt>
+                        <dt>
+                            Second Item
+                        <dd>Description of second Item.
+                        </dd>
+                        </dt>
+                    </dl>
+                </div>
+            </div>
+
+        </div>
+        <style>
+            table, td, th{
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 10px;
+            }
+        </style>
+        <div class="third-div">
+            <h2>Table Example</h2>
+            <table>
+                <tr>
+                    <th>SR. NO</td>
+                    <th>NAME</td>
+                    <th>MARKS</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Ayush</td>
+                    <td>96</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Ram</td>
+                    <td>95</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Sham</td>
+                    <td rowspan="2">95</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Geeta</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Sita</td>
+                    <td>94</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total : 475/500</td>
+                </tr>
+
+            </table>
+        </div>
+        <div class="fourth-div">
+            <h2>Image Tag Example</h2>
+            <img src="Assignments/assets/profile.png" alt="profile-image">
+            <!-- <iframe src="itachi.jpg" frameborder="4px"></iframe> -->
+        </div>
+       
+    </section>
+    <section class="second-section">
+        <div class="seventh-div">
+            <form action="" method="post">
+                <h3 style="color: #007bff; text-transform: uppercase;">Employee Registration Form</h3>
+                <div class="form-group">
+                    <label for="name">Name :</label>
+                    <input type="text" name="name">
+                </div>
+
+                <div class="form-group">
+                    <label for="emp-id">ID :</label>
+                    <input type="number" name="emp-id">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">E-Mail :</label>
+                    <input type="email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="department">Dept :</label>
+                    <input type="text" name="department">
+                </div>
+
+                <div class="form-group">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+        <div class="output">
+            <h3>Entered Employee Details:</h3>
+            <p><strong>Name:</strong> <?php echo $name; ?></p>
+            <p><strong>ID:</strong> <?php echo $emp_id; ?></p>
+            <p><strong>Email:</strong> <?php echo $email; ?></p>
+            <p><strong>Department:</strong> <?php echo $department; ?></p>
+        </div>
+        <div class="fifth-div" style="margin:4px;">
+            <h2>Frames</h2>
+            <iframe src="Assignments/assignment-10.html"></iframe>
+        </div>
+        <div class="sixth-div" style="margin:4px;">
+            <h2>Example of Link/Anchor Tag</h2>
+            <a href="https://www.google.co.in/">Visit Google</a>
+        </div>
+
+    </section>
+</body>
+
+</html>
